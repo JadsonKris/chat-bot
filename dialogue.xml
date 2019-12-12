@@ -1,0 +1,180 @@
+<!--- <aiml> inicia o bloco AIML.
+
+<category> indica uma categoria ou unidade de conhecimento.
+
+<pattern> Indica o padrão da mensagem que será digitada pelo usuário.
+
+<templat> indica a resposta para o que foi digitado
+
+<random> proporciona respostas aleatórias
+
+<li> marca bloco de respostas aleatórias é usado dentro do bloco <random>
+
+<that> registra a ultima sentença, gerando uma seqüência no dialogo.
+
+<srai> Redireciona para outra questão ou categoria.
+
+coloque pattern tudo maisculo
+-->
+
+<aiml>
+
+    <category>
+        <pattern>MENU</pattern>
+        <template>
+            Digite:
+            /n Troca de oleo para solicitar uma uma troca de oleo
+            /n Revisao para solitcitar uma revisao
+            /n Comprar pecas do carro para entrar na area de compra de pecas
+            /n Trocar pneus para ir para a area de troca de pneus
+            /n Limpeza para solicitar uma limpeza do carro
+            /n Guincho para solicitar um guincho
+            /n Manutencao preventiva para solicitar uma manutencao preventiva
+            /n Troca de parabrisa para solicitar a troca do parabrisa
+            /n Oferta especial para conferir se tem alguma promocao no momento
+            /n Quem somos para conhecer um pouco da nossa historia
+            /n Agendar consulta para agentar uma consulta futura
+            /n endereço de entrega para cadastrar um endereço para entregar
+            /n finalizar pedido para encerrar os pedidos
+            /n ou digite sair para finalizar o sistema a qualquer momento.
+        </template>
+    </category>
+
+    <category>
+        <pattern>INICIO</pattern>
+        <template>
+            <random>
+                <li>Olá, seja bem vindo ao nosso sistema, para mais informações digite Menu.</li>
+                <li>Oi, pode inicilizar seu pedido digitando pedido ou digite Menu para mais informações</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SAIR</pattern>
+        <template>
+            Obrigado pela preferencia, volte sempre.
+        </template>
+    </category>
+
+    <category>
+        <pattern>TROCA DE OLEO</pattern>
+        <template>
+            Troca de oleo realizada com sucesso
+        </template>
+    </category>
+
+    <category>
+        <pattern>REVISAO</pattern>
+        <template>
+            Digite: Revisao (parte a ser revista) ou Revisao geral, para realizar a revisao.
+        </template>
+    </category>
+
+    <category>
+        <pattern>COMPRAR PECAS DE CARRO</pattern>
+        <template>
+            Digite: Peca (Nome da peca), para concluir o pedido
+        </template>
+    </category>
+
+    <category>
+        <pattern>TROCAR PNEUS</pattern>
+        <template>
+            Digite: PNEU (qual pneu deve trocar (traseito esquerdo, frontal direito ...))
+        </template>
+    </category>
+
+    <category>
+        <pattern>PECA *</pattern>
+        <template>
+            Obrigado por comprar a peca <star index = "1" />.
+        </template>
+    </category>
+
+    <category>
+        <pattern>PNEU *</pattern>
+        <template>
+            Pneu <star index="1"/>  trocado, volte sempre.
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIMPEZA</pattern>
+        <template>
+            Limpeza realizada, volte sempre.
+        </template>
+    </category>
+
+    <category>
+        <pattern>REVISAO DE *</pattern>
+        <template>
+            <star index="1" /> realizada aguarde o relatorio do especialista e obrigado pela preferencia volte sempre.
+        </template>
+    </category>
+
+    <category>
+        <pattern>GUINCHO</pattern>
+        <template>
+            Guincho solicitado, volte sempre.
+        </template>
+    </category>
+
+    <category>
+        <pattern>REVISAO GERAL</pattern>
+        <template>
+            Revisao geral realizada aguarde o relatorio do especialista e obrigado pela preferencia volte sempre.
+        </template>
+    </category>
+
+    <category>
+        <pattern>MANUTENCAO PREVENTIVA</pattern>
+        <template>
+            Manuntencao preventiva realizada aguarde o relatorio do especialista e obrigado pela preferencia volte sempre.
+        </template>
+    </category>
+
+    <category>
+        <pattern>TROCA DE PARABRISA</pattern>
+        <template>
+            Parabrisa trocado, volte sempre.
+        </template>
+    </category>
+
+    <category>
+        <pattern>OFERTA ESPECIAL</pattern>
+        <template>
+            Nenhuma oferta no momento.
+        </template>
+    </category>
+
+    <category>
+        <pattern>FINALIZAR PEDIDO</pattern>
+        <template>
+            Obrigado pela preferencia, volte sempre.
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUEM SOMOS</pattern>
+        <template>
+            Oficina do geraldo, since 1912.
+        </template>
+    </category>
+
+    <category>
+        <pattern>AGENDAR CONSULTA</pattern>
+        <template>
+            consulta agendada, volte sempre.
+        </template>
+    </category>
+
+    <category>
+        <pattern>ENDEREÇO DE ENTREGA</pattern>
+        <template>
+            Endereço de Entrega registrado, volte sempre.
+        </template>
+    </category>
+
+
+</aiml>

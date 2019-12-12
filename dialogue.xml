@@ -1,21 +1,3 @@
-<!--- <aiml> inicia o bloco AIML.
-
-<category> indica uma categoria ou unidade de conhecimento.
-
-<pattern> Indica o padrão da mensagem que será digitada pelo usuário.
-
-<templat> indica a resposta para o que foi digitado
-
-<random> proporciona respostas aleatórias
-
-<li> marca bloco de respostas aleatórias é usado dentro do bloco <random>
-
-<that> registra a ultima sentença, gerando uma seqüência no dialogo.
-
-<srai> Redireciona para outra questão ou categoria.
-
-coloque pattern tudo maisculo
--->
 
 <aiml>
 
